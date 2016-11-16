@@ -38,9 +38,12 @@ class Feet implements ICadGenerator, IParameterChanged{
 		ArrayList<CSG> allCad=defaultCadGen.generateCad(d,linkIndex);
 		ArrayList<DHLink> dhLinks=d.getChain().getLinks();
 		DHLink dh = dhLinks.get(linkIndex)
+		LinkConfiguration conf = d.getLinkConfiguration(linkIndex);
+		HashMap<String, Object> shaftmap = Vitamins.getConfiguration(conf.getShaftType(),conf.getShaftSize())
+		double hornOffset = 	shaftmap.get("hornThickness")	
+		HashMap<String, Object> servoVitaminData = Vitamins.getConfiguration ("hobbyServo", "towerProMG91")
 
 		//The link configuration
-		LinkConfiguration conf = d.getLinkConfiguration(linkIndex);
 		// creating the servo
 		CSG servoReference=   Vitamins.get(conf.getElectroMechanicalType(),conf.getElectroMechanicalSize())
 		.transformed(new Transform().rotZ(90))
@@ -68,7 +71,16 @@ class Feet implements ICadGenerator, IParameterChanged{
 			defaultCadGen.add(allCad,otherBit,dh.getListener())
 			defaultCadGen.add(allCad,foot,dh.getListener())
 		}
-		
+
+		double connectorCutOut = shaftmap.get("hornBaseDiameter") + shaftmap.get("hornLength")
+
+		CSG connectorBase = new Cube (connectorCutOut * 1.7 , shaftmap.get("hornBaseDiameter")* 2, hornOffset * 2).toCSG().toXMin()
+		CSG connectorRectangle = new Cube (10, shaftmap.get("hornBaseDiameter") * 2.5, hornOffset * 3).toCSG().moveX(-1/2 * hornOffset * 3)
+
+		CSG connector = connectorBase.union(connectorRectangle)
+
+		connector = defaultCadGen.moveDHValues(connector,dh)
+		defaultCadGen.add(allCad,connector,dh.getListener())
 		
 		return allCad;
 	}
