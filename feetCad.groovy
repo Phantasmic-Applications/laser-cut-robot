@@ -67,9 +67,9 @@ class Feet implements ICadGenerator, IParameterChanged{
 								*/
 			
 			//moving the pary to the attachment pont
-			otherBit = defaultCadGen.moveDHValues(otherBit,dh)
+			//otherBit = defaultCadGen.moveDHValues(otherBit,dh)
 			
-			defaultCadGen.add(allCad,otherBit,dh.getListener())
+			//defaultCadGen.add(allCad,otherBit,dh.getListener())
 			defaultCadGen.add(allCad,foot,dh.getListener())
 		}
 
