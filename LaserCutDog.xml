@@ -1,7 +1,7 @@
 <root>
 <mobilebase>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>laserCutCad.groovy</file>
 	</cadEngine>
 	<driveEngine>
@@ -14,7 +14,7 @@
 
 <name>DefaultLeg</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>feetCad.groovy</file>
 	</cadEngine>
 	<kinematics>
@@ -38,9 +38,9 @@
 	<homingTPS>10000000</homingTPS>
 	<vitamins>
 	<vitamin>
-	    <name>electroMechanical</name>
-	    <type>hobbyServo</type>
-	    <id>hv6214mg</id>
+	<name>electroMechanical</name>
+	<type>hobbyServo</type>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -93,7 +93,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -146,7 +146,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -206,7 +206,7 @@
 
 <name>DefaultLeg2</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>feetCad.groovy</file>
 	</cadEngine>
 	<kinematics>
@@ -232,7 +232,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -285,7 +285,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -338,7 +338,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -387,10 +387,10 @@
 	<x>199.99999999999994</x>
 	<y>-119.99999999999993</y>
 	<z>310.00000000000006</z>
-	<rotw>0.07925843266449964</rotw>
-	<rotx>-0.7026508422210522</rotx>
-	<roty>0.07925844988490705</roty>
-	<rotz>0.7026508422210516</rotz>
+	<rotw>0.07925775603446737</rotw>
+	<rotx>-0.7026567659152813</rotx>
+	<roty>0.07925911807285171</roty>
+	<rotz>0.7026567659152805</rotz>
 </baseToZframe>
 
 </leg>
@@ -398,7 +398,7 @@
 
 <name>DefaultLeg3</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>feetCad.groovy</file>
 	</cadEngine>
 	<kinematics>
@@ -424,7 +424,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -477,7 +477,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -530,7 +530,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -579,10 +579,10 @@
 	<x>199.99999999999994</x>
 	<y>120.00000000000007</y>
 	<z>310.00000000000006</z>
-	<rotw>0.07919711046363208</rotw>
-	<rotx>0.7026577614666388</rotx>
-	<roty>0.07919712878715471</roty>
-	<rotz>-0.7026577614666388</rotz>
+	<rotw>0.07919638935959387</rotw>
+	<rotx>0.7026640795943331</rotx>
+	<roty>0.07919784090847486</roty>
+	<rotz>-0.7026640795943331</rotz>
 </baseToZframe>
 
 </leg>
@@ -590,7 +590,7 @@
 
 <name>DefaultLeg4</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>feetCad.groovy</file>
 	</cadEngine>
 	<kinematics>
@@ -616,7 +616,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -669,7 +669,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -722,7 +722,7 @@
 	<vitamin>
 	<name>electroMechanical</name>
 	<type>hobbyServo</type>
-	<id>hv6214mg</id>
+	<id>towerProMG91</id>
 	</vitamin>
 	<vitamin>
 	<name>shaft</name>
@@ -782,7 +782,7 @@
 
 <name>Neck</name>
 	<cadEngine>
-		<git>https://github.com/madhephaestus/laser-cut-robot.git</git>
+		<git>https://github.com/pjmara/laser-cut-robot.git</git>
 		<file>neckCad.groovy</file>
 	</cadEngine>
 	<kinematics>
@@ -990,15 +990,15 @@
 	<roty>0.0</roty>
 	<rotz>0.0</rotz>
 </baseToZframe>
-<mass>0.01</mass>
-<centerOfMassFromCentroid>	<x>0.0</x>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>0.0</rotx>
 	<roty>0.0</roty>
 	<rotz>0.0</rotz></centerOfMassFromCentroid>
-<imuFromCentroid>	<x>0.0</x>
+	<imuFromCentroid>	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
