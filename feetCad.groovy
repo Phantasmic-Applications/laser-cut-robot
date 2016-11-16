@@ -75,7 +75,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 		double connectorCutOut = shaftmap.get("hornBaseDiameter") + shaftmap.get("hornLength")
 
 		CSG connectorBase = new Cube (connectorCutOut * 1.7 , shaftmap.get("hornBaseDiameter")* 2, hornOffset * 2).toCSG().toXMin()
-		CSG connectorRectangle = new Cube (10, shaftmap.get("hornBaseDiameter") * 2.5, hornOffset * 3).toCSG().moveX(-1/2 * hornOffset * 3)
+		CSG connectorRectangle = new Cube (10, shaftmap.get("hornBaseDiameter") * 2.5, hornOffset * 3).toCSG().movex(-1/2 * hornOffset * 3)
 
 		CSG connector = connectorBase.union(connectorRectangle)
 

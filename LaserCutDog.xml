@@ -14,7 +14,7 @@
 
 <name>DefaultLeg</name>
 	<cadEngine>
-		<git>https://github.com/pjmara/laser-cut-robot.git</git>
+		<git>https://github.com/Phantasmic-Applications/laser-cut-robot</git>
 		<file>feetCad.groovy</file>
 	</cadEngine>
 	<kinematics>
