@@ -58,12 +58,13 @@ class Feet implements ICadGenerator, IParameterChanged{
 			println "Found foot limb" 
 			CSG foot =new Cylinder(20,20,thickness.getMM(),(int)30).toCSG() // a one line Cylinder
 
-			CSG otherBit =new Cube(	40,// X dimention
+			/*CSG otherBit =new Cube(	40,// X dimention
 								dh.getR(),// Y dimention
 								thickness.getMM()//  Z dimention
 								).toCSG()// this converts from the geometry to an object we can work with
 								.toYMin()
 								.toZMin()
+								*/
 			
 			//moving the pary to the attachment pont
 			otherBit = defaultCadGen.moveDHValues(otherBit,dh)
