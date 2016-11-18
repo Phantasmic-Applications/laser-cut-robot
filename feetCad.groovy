@@ -82,7 +82,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 		connector = connector.rotz(90).movey(1/2*connectorCutOut)
 
 		connector = defaultCadGen.moveDHValues(connector,dh)
-		
+		connector = connector.movey(1/2*connectorCutOut)
 		defaultCadGen.add(allCad,connector,dh.getListener())
 		
 		return allCad;
