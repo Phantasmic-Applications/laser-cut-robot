@@ -81,7 +81,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 		CSG testRectangle = new Cube (10,10,10).toCSG()
 		CSG connector = connectorBase.union(connectorRectangle)
 		//CSG connector = connectorBase.union(testRectangle)
-		connector = connector.rotz(90)
+		connector = connector.rotz(90).movey(30)
 
 		connector = defaultCadGen.moveDHValues(connector,dh)
 		defaultCadGen.add(allCad,connector,dh.getListener())
