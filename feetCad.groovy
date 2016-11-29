@@ -73,6 +73,11 @@ class Feet implements ICadGenerator, IParameterChanged{
 			defaultCadGen.add(allCad,foot,dh.getListener())
 		}
 
+		if(linkIndex !=dhLinks.size()-1){
+			
+			
+		}
+
 		double connectorCutOut = shaftmap.get("hornLength")
 	
 
@@ -85,6 +90,10 @@ class Feet implements ICadGenerator, IParameterChanged{
 
 		connector = defaultCadGen.moveDHValues(connector,dh)
 		defaultCadGen.add(allCad,connector,dh.getListener())
+
+		connector.setManafacturing({CSG arg0 ->
+									return arg0.toZMin();
+		})
 		
 		return allCad;
 	}
