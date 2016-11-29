@@ -91,9 +91,9 @@ class Feet implements ICadGenerator, IParameterChanged{
 		connector = defaultCadGen.moveDHValues(connector,dh)
 		defaultCadGen.add(allCad,connector,dh.getListener())
 
-		connector.setManafactuing({CSG arg0 ->
+		connector.setManufactuing({CSG arg0 ->
 									return arg0.toZMin();
-		})
+		});
 		
 		return allCad;
 	}
