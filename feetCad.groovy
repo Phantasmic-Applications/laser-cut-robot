@@ -92,7 +92,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 		defaultCadGen.add(allCad,connector,dh.getListener())
 
 		connector.setManufactuing({CSG arg0 ->
-									return arg0.toZMin();
+									return defaultCadGen.reverseDHValues(arg0.toZMin(),dh);
 		});
 		
 		return allCad;
