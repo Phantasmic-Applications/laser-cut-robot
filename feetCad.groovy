@@ -73,16 +73,18 @@ class Feet implements ICadGenerator, IParameterChanged{
 			defaultCadGen.add(allCad,foot,dh.getListener())
 		}
 
-		if(linkIndex !=dhLinks.size()-1){
+		
 
-			CSG topKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 5).toCSG().movey(shaftmap.get("hornBaseDiameter")*2)
+			CSG topKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 5).toCSG()
+			//.movey(shaftmap.get("hornBaseDiameter")*2)
 			topKey = defaultCadGen.moveDHValues(topKey,dh)
 			defaultCadGen.add(allCad, topKey, dh.getListener())
-			
-		}
+		
 
 		double connectorCutOut = shaftmap.get("hornLength")
-	
+
+		CSG printTopKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 5).toCSG()
+		defaultCadGen.add(allCad, topKey, dh.getListener())
 
 		CSG connectorBase = new Cube (shaftmap.get("hornBaseDiameter") * 2.5,10 , hornOffset * 4).toCSG().toXMin()
 		CSG connectorRectangle = new Cube (hornOffset * 2, shaftmap.get("hornBaseDiameter")* 2.0, hornOffset * 5).toCSG()
