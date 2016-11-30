@@ -75,7 +75,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 
 		if(linkIndex !=dhLinks.size()-1){
 
-			CSG topKey = new Cube (hornOffest*4, shaftmap.get("hornBaseDiameter"), hornOffset * 5).toCSG()
+			CSG topKey = new Cube (hornOffset*4, shaftmap.get("hornBaseDiameter"), hornOffset * 5).toCSG()
 
 			defaultCadGen.add(allCad, topKey, dh.getListener())
 			
