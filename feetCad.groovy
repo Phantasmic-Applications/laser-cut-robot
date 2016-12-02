@@ -76,7 +76,7 @@ class Feet implements ICadGenerator, IParameterChanged{
 		
 
 			
-			CSG bottomSpaced = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin().movez(shaftmap.get("hornBaseDiameter"))
+			CSG bottomSpaced = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().movez(-50).toYMin()
 			//.movey(shaftmap.get("hornBaseDiameter")*2)
 			bottomSpaced = defaultCadGen.moveDHValues(bottomSpaced, dh)
 			defaultCadGen.add(allCad, bottomSpaced , dh.getListener())
