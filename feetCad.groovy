@@ -75,19 +75,18 @@ class Feet implements ICadGenerator, IParameterChanged{
 
 		
 
-			CSG topKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin()
-			CSG bottomSpaced = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin().movez(-shaftmap.get("hornBaseDiameter"))
+			
+			CSG bottomSpaced = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin().movez(shaftmap.get("hornBaseDiameter"))
 			//.movey(shaftmap.get("hornBaseDiameter")*2)
 			bottomSpaced = defaultCadGen.moveDHValues(bottomSpaced, dh)
-			defaultCadGen.add(allCad,bottomSpaced, dh.getListener())
+			defaultCadGen.add(allCad, bottomSpaced , dh.getListener())
+			
+			CSG topKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin()
 			topKey = defaultCadGen.moveDHValues(topKey,dh)
 			defaultCadGen.add(allCad, topKey, dh.getListener())
 		
 
 		double connectorCutOut = shaftmap.get("hornLength")
-
-		CSG printTopKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 5).toCSG()
-		defaultCadGen.add(allCad, topKey, dh.getListener())
 
 		CSG connectorBase = new Cube (shaftmap.get("hornBaseDiameter") * 2.5,10 , hornOffset * 4).toCSG().toXMin()
 		CSG connectorRectangle = new Cube (hornOffset * 2, shaftmap.get("hornBaseDiameter")* 2.0, hornOffset * 5).toCSG()
