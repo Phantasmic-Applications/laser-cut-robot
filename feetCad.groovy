@@ -78,12 +78,11 @@ class Feet implements ICadGenerator, IParameterChanged{
 			
 			CSG bottomSpaced = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().movez(-14).toYMin()
 			//.movey(shaftmap.get("hornBaseDiameter")*2)
-			bottomSpaced = defaultCadGen.moveDHValues(bottomSpaced, dh)
-			bottomSpaced.movez(-14)
+			
 			
 			
 			CSG topKey = new Cube (shaftmap.get("hornBaseDiameter"),dh.getR() , hornOffset * 8).toCSG().toZMin().toYMin()
-			topKey = defaultCadGen.moveDHValues(topKey,dh)
+			
 			
 		
 
@@ -95,15 +94,18 @@ class Feet implements ICadGenerator, IParameterChanged{
 		CSG connectorHole = new Cylinder (5,5,40,(int)(30)).toCSG()
 		CSG connector = connectorBase.union(connectorRectangle)
 		connector.difference(connectorHole.movex(5))
+		topKey.difference(connector.makeKeepaway(1.0))
 		//CSG connector = connectorBase.union(testRectangle)
 		connector = connector.rotz(90).movey(30)
 
 		connector = defaultCadGen.moveDHValues(connector,dh)
 		defaultCadGen.add(allCad,connector,dh.getListener())
 
-		topKey.difference(connector.makeKeepaway(2.85))
+		topKey = defaultCadGen.moveDHValues(topKey,dh)
 			defaultCadGen.add(allCad, topKey, dh.getListener())
 
+			bottomSpaced = defaultCadGen.moveDHValues(bottomSpaced, dh)
+			bottomSpaced.movez(-14)
 			bottomSpaced.difference(connector.makeKeepaway(2.85))
 			defaultCadGen.add(allCad, bottomSpaced , dh.getListener())
 
